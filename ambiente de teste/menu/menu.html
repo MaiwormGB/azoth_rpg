@@ -9,25 +9,52 @@
 </head>
 <body>
 
-    <button id="menu_status_btn" >Formulario status</button>
+    <button id="menu_recursos_btn" data-sessao="menu_recursos" >Formulario status</button>
 
     <div id="menu">
 
-        <form id="menu_status" class="menu_main">
+        <div id="menu_header">
 
-            <div class="menu_seg">
+            <button  data-tipo="recursos">Recursos</button>
+            <button  data-tipo="atributos">Atributos</button>
 
-                <h2>Alterar Status</h2>
+        </div>
 
-            </div>
+        <div id="menu_main">
 
-            <div class="menu_seg">
+            <form id="menu_recursos">
 
-                <h2>AAAAAAAAAAAA</h2>
+                <div class="menu_seg">
 
-            </div>
+                    <h2>STATUS</h2>
 
-        </form>
+                    <h3>Alterar recursos</h3>
+
+                    <select name="Tipo de recurso" id="menu_recursos_select">
+                        <option value="">PV</option>
+                        <option value="">SAN</option>
+                        <option value="">PE</option>
+                    </select>
+
+                    <div class="menu_inputs">
+
+                        <input type="text" id="menu_recursos_fixo">
+                        <input type="text" id="menu_recursos_mult">
+                        <input type="text" id="menu_recursos_mod_p">
+                        <input type="text" id="menu_recursos_mod_n">
+
+                    </div>
+
+
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+
 
     </div>
 

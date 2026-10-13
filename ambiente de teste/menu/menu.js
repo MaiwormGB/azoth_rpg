@@ -2,46 +2,41 @@ const menu = {
 
     id: document.getElementById('menu'),
 
-    status: {
+    recursos: {
 
-        id: document.getElementById('menu_status'),
-        button: document.getElementById('menu_status_btn')
+        id: document.getElementById('menu_recursos'),
+        button: document.getElementById('menu_recursos_btn')
 
-    } ,
+    },
 
     configurar(){
 
-        menu.id.addEventListener('click', menu.abrir);
-        menu.status.button.addEventListener('click', menu.abrir);
+        // Apenas ativa o abrir novamente ao clicar diretamente no menu
+        menu.id.addEventListener('click', (event) => {
+            if (event.target === menu.id) {
+                menu.abrir(event);
+            }
+        });
+
+
+        menu.recursos.button.addEventListener('click', (event) => {
+            event.stopPropagation();
+            menu.abrir(event);
+        });
 
     },
 
     abrir(event){
 
-        const elemento = event.currentTarget;
+        const elemento = event.target.dataset.sessao;
 
-        if (event.target !== elemento){
+        menu.id.classList.toggle('aberto');
+
+        if(!elemento){
+
             return;
-        }
-
-        if (menu.id.style.display === 'none'){
-
-            menu.id.style.display = 'flex'
-
-        }else{
-
-            menu.id.style.display = 'none'
 
         }
-
-        elemento.addEventListener('click', (event) => {
-            event.stopPropagation();
-
-        })
-        
-
-        console.log(elemento)
-
 
 
 
