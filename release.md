@@ -61,3 +61,21 @@ A nomenclatura de valores flutuantes foi mudada para "recursos". Como era de se 
 
 ---
 
+### MENUS MODULARES | VERSÃO 0.3.0
+>13/10/2026
+
+*MEUS OBJETIVOS SÃO:*
+- Organizar o novo modelo de menu com modulos
+- Separar os modulos de status
+
+**INICIO DO TRABALHO**
+> 21:20 - 13/10
+
+**TERMINO DO TRABALHO**
+> 23:01 - 13/10
+
+*NOTAS FINAIS*
+
+Os modulos de recursos e atributos estão no lugar, porem ainda sem javascript por tras. estou ainda no momento tentando organizar uma função robusta para salvamento que me permita a reaproveitar porteriormente em outras circunstancias. Provavelmente irei particionar a mesma em varias outras funções dentro de uma classe Salvar, mas isso vai ficar para amanhâ. Creta Ni AZOTH Boltre
+
+---

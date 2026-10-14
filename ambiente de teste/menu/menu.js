@@ -2,10 +2,10 @@ const menu = {
 
     id: document.getElementById('menu'),
 
-    recursos: {
+    status: {
 
-        id: document.getElementById('menu_recursos'),
-        button: document.getElementById('menu_recursos_btn')
+        id: document.getElementById('menu_status'),
+        button: document.getElementById('menu_status_btn')
 
     },
 
@@ -19,7 +19,7 @@ const menu = {
         });
 
 
-        menu.recursos.button.addEventListener('click', (event) => {
+        menu.status.button.addEventListener('click', (event) => {
             event.stopPropagation();
             menu.abrir(event);
         });
@@ -30,6 +30,7 @@ const menu = {
 
         const elemento = event.target.dataset.sessao;
 
+        //Ativa a classe se ela não existir, remove a classe se ela já existir
         menu.id.classList.toggle('aberto');
 
         if(!elemento){
@@ -38,7 +39,30 @@ const menu = {
 
         }
 
+        menu.atualizar()
 
+    },
+
+    atualizar(){
+
+        const inputs = menu.id.querySelectorAll('input')
+        const ativos = []
+
+        inputs.forEach(input => {
+            
+            const estilo = getComputedStyle(input)
+            
+            if (estilo.display === 'none'){
+
+                return;
+
+            }
+
+            ativos.push(input);
+
+        });
+
+        
 
     }
 
