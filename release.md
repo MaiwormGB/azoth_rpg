@@ -79,3 +79,21 @@ A nomenclatura de valores flutuantes foi mudada para "recursos". Como era de se 
 Os modulos de recursos e atributos estão no lugar, porem ainda sem javascript por tras. estou ainda no momento tentando organizar uma função robusta para salvamento que me permita a reaproveitar porteriormente em outras circunstancias. Provavelmente irei particionar a mesma em varias outras funções dentro de uma classe Salvar, mas isso vai ficar para amanhâ. Creta Ni AZOTH Boltre
 
 ---
+
+### MENUS MODULARES 2 | Versão 0.4.0
+>14/10/2026
+
+*MEUS OBJETIVOS SÃO:*
+- Continuar a logida de menus modulares
+
+**INICIO DO TRABALHO**
+> 21:32 - 14/10
+
+**TERMINO DO TRABALHO**
+> 23:55 - 14/10
+
+*NOTAS FINAIS*
+
+Por hora, consegui organizar os metodos de preencher o menu com os dados já presentes na ficha para auxiliar na mudança dos mesmos. Não consegui fazer do jeito mais sucinto que poderia mas é parte do processo, imagino. que isso não volte pra me morder mais pra frente... O salvamento vai ter que ficar para um futuro proximo. Espero conseguir terminar isso amanhâ e jogar um pouco de Deadlock. Creta Ni AZOTH Boltre.
+
+---

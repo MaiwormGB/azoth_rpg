@@ -6,19 +6,19 @@ let ficha = {
     // 1 - PV multiplicador
     // 2 - PVT mod positivo
     // 3 - PVT mod negativo
-    pvC: [0,2,0,0],
+    pvC: [10,2,0,0],
 
     // 0 - SAN Fixo
     // 1 - SAN multiplicador
     // 2 - SANT mod positivo
     // 3 - SANT mod negativo
-    sanC: [0,2,0,0],
+    sanC: [5,2,0,0],
 
     // 0 - PE Fixo
     // 1 - PE multiplicador
     // 2 - PET mod positivo
     // 3 - PET mod negativo
-    peC: [0,2,0,0],
+    peC: [2,2,0,0],
 
     // 0 - DEF fixo
     // 1 - DEF mod positivo
@@ -35,7 +35,7 @@ let ficha = {
         For: 1,
         Agi: 1,
         Int: 1,
-        Pres: 1,
+        Pre: 1,
         Vig: 1,
     },
 
@@ -211,16 +211,16 @@ let temporario = {
     // ATRIBUTOS temporários (convertido para objeto nomeado, mesmas chaves de ficha.atributos)
     atributosModP: {
         For: 0,
-        Agi: 0,
+        Agi: 2,
         Int: 0,
-        Pres: 0,
+        Pre: 0,
         Vig: 0,
     },
     atributosModN: {
         For: 0,
         Agi: 0,
         Int: 0,
-        Pres: 0,
+        Pre: 3,
         Vig: 0,
     },
 
