@@ -174,7 +174,32 @@ const menu = {
         })
         
 
+    },
+
+    salvar(){
+
+        const forms = menu.id.querySelectorAll('form')
+        const ativos = []
+
+        forms.forEach(form => {
+            
+            const estilo = getComputedStyle(form)
+            
+            if (estilo.display === 'none'){
+
+                return;
+
+            }
+
+            ativos.push(form);
+
+        });
+
+        console.log(arivos)
+
     }
+
+
 
 }
 

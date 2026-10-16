@@ -97,3 +97,19 @@ Os modulos de recursos e atributos estão no lugar, porem ainda sem javascript p
 Por hora, consegui organizar os metodos de preencher o menu com os dados já presentes na ficha para auxiliar na mudança dos mesmos. Não consegui fazer do jeito mais sucinto que poderia mas é parte do processo, imagino. que isso não volte pra me morder mais pra frente... O salvamento vai ter que ficar para um futuro proximo. Espero conseguir terminar isso amanhâ e jogar um pouco de Deadlock. Creta Ni AZOTH Boltre.
 
 ---
+
+### RETOQUES DO MENU | Versão 0.4.1
+>15/10/2026
+
+*MEUS OBJETIVOS SÃO*
+- Polir o menu e fazer alterações simples
+
+**INICIO DO TRABALHO**
+> 22:08 - 15/10
+
+**TERMINO DO TRABALHO**
+> 23:06 - 15/10
+
+*NOTAS FINAIS*
+
+Não houve muito avanço hoje, na verdade, pois tive um dia extremamente cheio. Que o resto do trabalho fique pro amanhâ. Creta Ni AZOTH Boltre.

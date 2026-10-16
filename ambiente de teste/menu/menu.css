@@ -136,12 +136,14 @@
     var(--menu-cor-2));
     width: auto;
     min-height: 400px;
+    max-height: 600px;
     border-radius: 30px;
     border: var(--menu-cor-3) solid 12px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: scroll;
 
 }
 
