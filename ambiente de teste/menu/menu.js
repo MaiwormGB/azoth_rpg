@@ -22,20 +22,22 @@ const menu = {
             switch (`${select.value}C`){
 
                 case 'pvC':
-                    atributo.textContent = `VIG | ${ficha.atributos.Vig}`
+                    atributo.textContent = `VIG | ${ficha.status.atributos.Vig.fixo}`
                 break;
 
                 case 'sanC':
-                    atributo.textContent = `INT| ${ficha.atributos.Int}`
+                    atributo.textContent = `INT| ${ficha.status.atributos.Int.fixo}`
                 break;
 
                 case 'peC':
-                    atributo.textContent = `PRE | ${ficha.atributos.Pre}`
+                    atributo.textContent = `PRE | ${ficha.status.atributos.Pre.fixo}`
                 break;
 
             }
             
             inputs.forEach((input, index) => {
+
+                input.dataset.tipo = `${select.value}C`
 
                 if (index === 4){
 
@@ -60,6 +62,8 @@ const menu = {
             const select = document.getElementById(`${id}_select`)
 
             inputs.forEach((input, index) => {
+
+                input.dataset.tipo = select.value
 
                 switch (index){
 
@@ -176,10 +180,20 @@ const menu = {
 
     },
 
+    relacionar(valor, tipo){
+
+        if(tipo in ficha){
+
+            ficha[tipo] = valor;
+
+        }
+
+        console.log('Não')
+
+    },
     salvar(){
 
         const forms = menu.id.querySelectorAll('form')
-        const ativos = []
 
         forms.forEach(form => {
             
@@ -191,11 +205,27 @@ const menu = {
 
             }
 
-            ativos.push(form);
+            const valores = [];
+            const tipos = [];
+
+            const inputs = form.querySelectorAll('input')
+
+            console.log(inputs)
+
+            inputs.forEach(input => {
+            
+                const valor = input.value
+                const tipo = input.dataset.tipo
+
+                menu.relacionar(valor, tipo)
+
+            })
+
+            console.log(valores, tipos)
+
+            
 
         });
-
-        console.log(arivos)
 
     }
 

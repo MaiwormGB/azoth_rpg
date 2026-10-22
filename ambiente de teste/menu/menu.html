@@ -38,17 +38,41 @@
 
                     <div class="menu_inputs" id="menu_recursos_inputs">
 
-                        <input type="number" id="menu_recursos_fixo">
+                        <input 
+                            type="number" 
+                            data-p="status"
+                            data-s="pvC"
+                            data-t="fixo" 
+                            id="menu_recursos_fixo">
                         <p>+</p>
-                        <input type="number" id="menu_recursos_mult">
+                        <input 
+                            type="number"
+                            data-p="status" 
+                            data-s="pvC"
+                            data-t="mult" 
+                            id="menu_recursos_mult">
                         <p>x</p>
                         <p id="menu_recursos_atributo"></p>
                         <p>+</p>
-                        <input type="number" id="menu_recursos_mod_p">
+                        <input 
+                            type="number"
+                            data-p="status"
+                            data-s="pvC"    
+                            data-t="modP" 
+                            id="menu_recursos_mod_p">
                         <p>-</p>
-                        <input type="number" id="menu_recursos_mod_n">
+                        <input 
+                            type="number" 
+                            data-p="status"
+                            data-s="pvC"
+                            data-t="modN" 
+                            id="menu_recursos_mod_n">
                         <p>+</p>
-                        <input type="number" id="menu_recursos_extra">
+                        <input 
+                            type="number" 
+                            data-p="status"
+                            data-s="pvE"
+                            id="menu_recursos_extra">
 
                     </div>
 
@@ -77,11 +101,29 @@
 
                     <div class="menu_inputs" id="menu_atributos_inputs">
 
-                        <input type="number" id="menu_atributos_fixo">
+                        <input 
+                            type="number" 
+                            data-p="status"
+                            data-s="atributos"
+                            data-t="For"
+                            data-q="fixo" 
+                            id="menu_atributos_fixo">
                         <p>+</p>
-                        <input type="number" id="menu_recursos_mod_p">
+                        <input 
+                            type="number" 
+                            data-p="status"
+                            data-s="atributos"
+                            data-t="For"
+                            data-q="modP" 
+                            id="menu_atributos_mod_p">
                         <P>-</P>
-                        <input type="number" id="menu_recursos_mod_n">
+                        <input 
+                            type="number" 
+                            data-p="status"
+                            data-s="atributos"
+                            data-t="For"
+                            data-q="modN" 
+                            id="menu_atributosx _mod_n">
 
                     </div>
 
@@ -92,7 +134,7 @@
 
             </form>
 
-            <button id="menu_salvar">Salvar</button>
+            <button id="menu_salvar" onclick="salvar()">Salvar</button>
 
         </div>
 
@@ -102,6 +144,8 @@
 
     <script src="menu.js"></script>
     <script src="../ficha_dados.js"></script>
+    <script src="../ficha_calculos copy.js"></script>
+    <script src="teste.js"></script>
     
 </body>
 </html>

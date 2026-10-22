@@ -113,3 +113,42 @@ Por hora, consegui organizar os metodos de preencher o menu com os dados já pre
 *NOTAS FINAIS*
 
 Não houve muito avanço hoje, na verdade, pois tive um dia extremamente cheio. Que o resto do trabalho fique pro amanhâ. Creta Ni AZOTH Boltre.
+
+---
+
+### ESTRUTURA NOVA DE DADOS | Versão 0.5.0
+> 20/10/2026
+
+*MEUS OBJETIVOS SÃO*
+- Organizar a estrutura de dados da ficha para melhor acesso geral
+
+**INICIO DO TRABALHO**
+> 09:47 - 20/10
+
+**TERMINO DO TRABALHO**
+> 10:20 - 20/10
+
+*NOTAS FINAIS*
+
+Não pude trabalhar muito hoje novamente por questão de tempo. escola ta complicado. Talvez mais tarde eu tente continuar adaptando os JS ao novo metodo.
+
+---
+
+### ATUALIZAÇÃO DE CALCULOS | Versão 0.5.1
+> 20/10/2026
+
+*MEUS OBJETIVOS SÃO*
+- Atualizar os calculos para a nova estrutura de dados
+- Se der tempo, permitir o salvamento das informações na ficha.
+
+**INICIO DO TRABALHO**
+> 19:56 - 20/10
+
+**TERMINO DO TRABALHO**
+> 22:24 - 21/10
+
+*NOTAS FINAIS*
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Depois de HORAS (não todas as entre o começo da versão até o final dela, visto que esqueci de fechar essa versão ontem a noite) consegui criar um metodo de salvamento direto que seja escalavel para qualquer input a qualquer momento. Agora só ajeitar o resto dos metodos para se adaptarem a nova construção da ficha. CRETA NI AZOTH BOLTRE
+
