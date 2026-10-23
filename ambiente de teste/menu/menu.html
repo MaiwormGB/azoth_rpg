@@ -15,8 +15,14 @@
 
         <div id="menu_header">
 
-            <button  data-tipo="recursos">Recursos</button>
-            <button  data-tipo="atributos">Atributos</button>
+            <button  id="menu_btn_status">Status</button>
+            <button  id="menu_btn_pericias">Pericias</button>
+            <button  id="menu_btn_combate">Combate</button>
+            <button  id="menu_btn_relvas">Relvas</button>
+            <button  id="menu_btn_talentos">Talentos</button>
+            <button  id="menu_btn_inventario">Inventario</button>
+            <button  id="menu_btn_credencial">Credencial</button>
+            <button  id="menu_btn_fechar">Fechar</button>
 
         </div>
 
@@ -30,7 +36,7 @@
 
                     <h3>Alterar recursos</h3>
 
-                    <select name="Tipo de recurso" id="menu_recursos_select">
+                    <select name="Tipo de recurso" data-p="recursos" id="menu_recursos_select">
                         <option value="pv">PV</option>
                         <option value="san">SAN</option>
                         <option value="pe">PE</option>
@@ -91,7 +97,7 @@
 
                     <h3>Alterar atributos</h3>
 
-                    <select name="Atributo" id="menu_atributos_select">
+                    <select name="Atributo" id="menu_atributos_select" data-p="atributos">
                         <option value="For">FOR</option>
                         <option value="Agi">AGI</option>
                         <option value="Int">INT</option>
@@ -134,7 +140,9 @@
 
             </form>
 
-            <button id="menu_salvar" onclick="salvar()">Salvar</button>
+            
+
+            <button id="menu_salvar" onclick="menu.salvar()">Salvar</button>
 
         </div>
 

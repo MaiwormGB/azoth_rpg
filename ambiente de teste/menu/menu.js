@@ -9,7 +9,71 @@ const menu = {
 
     },
 
-    preencher: {
+    preencher(){
+
+        const inputs = menu.id.querySelectorAll('input');
+
+        inputs.forEach((input) =>{
+
+            indice = {
+
+                p: input.dataset.p,
+                s: input.dataset.s,
+                t: input.dataset.t,
+                q: input.dataset.q
+
+            }
+
+            objeto = ficha
+        
+            if(!indice.t){
+
+                    if(!ficha[indice.p][indice.s] &&
+                        ficha[indice.p][indice.s] !== 0
+                    ){
+
+                        objeto = temporario
+
+                    }
+
+                    input.value = objeto[indice.p][indice.s] 
+                    return;
+
+                }
+
+                if(!indice.q){
+
+                    if(!ficha[indice.p][indice.s][indice.t] &&
+                        ficha[indice.p][indice.s][indice.t] !== 0
+                    ){
+
+                        objeto = temporario
+
+                    }
+
+                    input.value = objeto[indice.p][indice.s][indice.t] 
+                    return;
+
+                }else{
+
+                    if(!ficha[indice.p][indice.s][indice.t][indice.q] &&
+                        ficha[indice.p][indice.s][indice.t][indice.q] !== 0
+                    ){
+
+                        objeto = temporario
+
+                    }
+
+                    input.value = objeto[indice.p][indice.s][indice.t][indice.q]
+                    return;
+
+                }
+        
+        })
+
+    },
+
+    /*preencher: {
 
         recursos(id){
 
@@ -85,6 +149,61 @@ const menu = {
 
         }
 
+    },*/
+
+    alterarInputs(){
+
+        selects = menu.id.querySelectorAll('select');
+        
+        selects.forEach((select) => {
+
+            tipo = select.dataset.p;
+            form = select.parentElement;
+            val = select.value;
+            inputs = form.querySelectorAll('input')
+
+            switch (tipo){
+
+                case 'recursos': 
+                    
+                    atributos = {
+
+                        pv: 'Vig',
+                        san: 'Int',
+                        pe: 'Pre'
+
+                    }
+
+                    texto = document.getElementById('menu_recursos_atributo');
+
+                    texto.textContent = `${atributos[val].toUpperCase()} | ${ficha.status.atributos[atributos[val]].fixo}`
+
+                    inputs.forEach((input, indice) => {
+
+                        input.dataset.s = `${val}C`
+
+                        if(indice === 4){
+
+                            input.dataset.s = `${val}E`
+
+                        }
+
+                    })
+                    break;
+
+                case 'atributos':
+                    
+                    inputs.forEach((input) =>{
+
+                        input.dataset.t = val;
+
+                    }) 
+
+
+            }
+
+        })
+
     },
 
     configurar(){
@@ -137,95 +256,88 @@ const menu = {
 
     atualizar(){
 
-        const forms = menu.id.querySelectorAll('form')
-        const ativos = []
 
-        forms.forEach(form => {
-            
-            const estilo = getComputedStyle(form)
-            
-            if (estilo.display === 'none'){
-
-                return;
-
-            }
-
-            ativos.push(form);
-
-        });
-
-        ativos.forEach(form => {
-
-            const id = form.id;
-
-            switch (id){
-
-                // Possui div de inputs
-                case "menu_recursos":
-
-                    menu.preencher.recursos(id)
-
-                    break;
-
-                case "menu_atributos":
-
-                    menu.preencher.atributos(id)
-
-                    break;
-
-            }
-
-        })
-        
+        menu.alterarInputs()
+        menu.preencher()
 
     },
 
-    relacionar(valor, tipo){
-
-        if(tipo in ficha){
-
-            ficha[tipo] = valor;
-
-        }
-
-        console.log('Não')
-
-    },
     salvar(){
 
-        const forms = menu.id.querySelectorAll('form')
+        const inputs = menu.id.querySelectorAll('input');
 
-        forms.forEach(form => {
-            
-            const estilo = getComputedStyle(form)
-            
-            if (estilo.display === 'none'){
+        inputs.forEach((input) =>{
 
+            indice = {
+
+                p: input.dataset.p,
+                s: input.dataset.s,
+                t: input.dataset.t,
+                q: input.dataset.q
+
+            }
+
+            objeto = ficha
+
+            // Checa se o valor é um numero ou não
+            val = Number(input.value) || Number(input.value) === 0? 
+                Number(input.value) : 
+                input.value;
+
+            if(!val && val !== 0){
+
+                console.log('vazio')
                 return;
 
             }
 
-            const valores = [];
-            const tipos = [];
+            if(!indice.t){
 
-            const inputs = form.querySelectorAll('input')
+                if(!ficha[indice.p][indice.s] &&
+                    ficha[indice.p][indice.s] !== 0
+                ){
 
-            console.log(inputs)
+                    objeto = temporario
 
-            inputs.forEach(input => {
-            
-                const valor = input.value
-                const tipo = input.dataset.tipo
+                }
 
-                menu.relacionar(valor, tipo)
+                objeto[indice.p][indice.s] = val
+                return;
 
-            })
+            }
 
-            console.log(valores, tipos)
+            if(!indice.q){
 
-            
+                if(!ficha[indice.p][indice.s][indice.t] &&
+                    ficha[indice.p][indice.s][indice.t] !== 0
+                ){
 
-        });
+                    objeto = temporario
+
+                }
+
+                objeto[indice.p][indice.s][indice.t] = val
+                return;
+
+            }else{
+
+                if(!ficha[indice.p][indice.s][indice.t][indice.q] &&
+                    ficha[indice.p][indice.s][indice.t][indice.q] !== 0
+                ){
+
+                    objeto = temporario
+
+                }
+
+                objeto[indice.p][indice.s][indice.t][indice.q] = val
+                return;
+
+            }
+
+
+        })
+
+        alert('SUCESSO:: FICHA SALVA!')
 
     }
 

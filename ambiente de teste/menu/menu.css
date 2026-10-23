@@ -77,19 +77,21 @@
 #menu_header{
 
     width: fit-content;
-    height: fit-content;
+    height: max-content;
     background-color: #1a1611;
     display: flex;
     justify-content: center;
     gap: var(--menu-gap-1);
     padding: 15px 30px;
     border-radius: 10px;
+    min-height: 0;
 
 }
 
 #menu_header button, #menu_salvar{
 
     height: 100%;
+    max-height: 50px;
     width: fit-content;
     padding: 0 20px;
     border-radius: 10px;
@@ -99,6 +101,13 @@
     border-bottom: 5px solid var(--menu-cor-3);
     background-color: var(--menu-cor-4);
     transition: 0.5 ease;
+    text-align: center;
+
+}
+
+#menu_btn_fechar{
+
+    display: none;
 
 }
 
@@ -124,10 +133,14 @@
 
     flex: 1;
     display: flex;
+    width: 100%;
+    justify-content: center;
     align-items: center;
-    gap: var(--menu-gap-1)
+    gap: var(--menu-gap-1);
+    overflow-x: scroll;
 
 }
+
 
 #menu form{
 
@@ -219,7 +232,7 @@
 }
 
 @media (max-width: 1100px) {
-    
+
 #menu form{
     flex-direction: column;
     height: fit-content;
@@ -227,14 +240,55 @@
 
 }
 
-}
+#menu_header{
 
-@media (max-width: 500px) {
-
-#menu form {
-
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
 }
-    
+
+#menu_header button{
+
+    width: 70%;
+
+}
+
+}
+
+@media (max-width: 650px) {
+
+#menu{
+
+    padding-bottom: 80px;
+
+}
+
+#menu_header{
+
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.menu_inputs{
+
+    padding-bottom: 20px;
+
+}
+
+#menu_main{
+
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+#menu_btn_fechar{
+
+    display: block;
+
+}
+
 }

@@ -1,8 +1,6 @@
-function salvar(){
+function preencher(){
 
-    const menu = document.getElementById('menu');
-
-    const inputs = menu.querySelectorAll('input');
+    const inputs = menu.id.querySelectorAll('input');
 
     inputs.forEach((input) =>{
 
@@ -16,73 +14,50 @@ function salvar(){
         }
 
         objeto = ficha
-
-        // Checa se o valor é um numero ou não
-        val = Number(input.value) && Number(input.value !== 0)? 
-            Number(input.value) : 
-            input.value;
-
-        if(!val){
-
-            console.log('vazio')
-            return;
-
-        }
-
-        console.log(val)
-
+    
         if(!indice.t){
 
-            if(!ficha[indice.p][indice.s] &&
-                ficha[indice.p][indice.s] !== 0
-            ){
+                if(!ficha[indice.p][indice.s] &&
+                    ficha[indice.p][indice.s] !== 0
+                ){
 
-                objeto = temporario
+                    objeto = temporario
 
-            }
+                }
 
-            objeto[indice.p][indice.s] = val
-            console.log(objeto.status)
-            return;
-
-        }
-
-        if(!indice.q){
-
-            if(!ficha[indice.p][indice.s][indice.t] &&
-                ficha[indice.p][indice.s][indice.t] !== 0
-             ){
-
-                objeto = temporario
+                input.value = objeto[indice.p][indice.s] 
+                return;
 
             }
 
-            console.log(indice)
+            if(!indice.q){
 
-            objeto[indice.p][indice.s][indice.t] = val
+                if(!ficha[indice.p][indice.s][indice.t] &&
+                    ficha[indice.p][indice.s][indice.t] !== 0
+                ){
 
+                    objeto = temporario
 
-            console.log(objeto.status)
-            return;
+                }
 
-        }else{
+                input.value = objeto[indice.p][indice.s][indice.t] 
+                return;
 
-            if(!ficha[indice.p][indice.s][indice.t][indice.q] &&
-                ficha[indice.p][indice.s][indice.t][indice.q] !== 0
-            ){
+            }else{
 
-                objeto = temporario
+                if(!ficha[indice.p][indice.s][indice.t][indice.q] &&
+                    ficha[indice.p][indice.s][indice.t][indice.q] !== 0
+                ){
+
+                    objeto = temporario
+
+                }
+
+                input.value = objeto[indice.p][indice.s][indice.t][indice.q]
+                return;
 
             }
-
-            objeto[indice.p][indice.s][indice.t][indice.q] = val
-            console.log(objeto.status)
-            return;
-
-        }
-
-
+    
     })
-
 
 }

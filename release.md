@@ -152,3 +152,20 @@ Não pude trabalhar muito hoje novamente por questão de tempo. escola ta compli
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 Depois de HORAS (não todas as entre o começo da versão até o final dela, visto que esqueci de fechar essa versão ontem a noite) consegui criar um metodo de salvamento direto que seja escalavel para qualquer input a qualquer momento. Agora só ajeitar o resto dos metodos para se adaptarem a nova construção da ficha. CRETA NI AZOTH BOLTRE
 
+---
+
+### REVISÃO DE CALCULOS | Versão 0.5.2
+
+*MEUS OBJETIVOS SÃO*
+- Terminar de atualizar os calculos para a nova estrutura de dados
+- Salvar a ficha salva no localhost
+
+**INICIO DO TRABALHO**
+> 09:24 - 22/10
+
+**TERMINO DO TRABALHO**
+> 14:42 - 22/10
+
+*NOTAS FINAIS*
+
+Não consegui a parte do localhost, mas consegui fazer a esturura escalavel o bastante para(ao menos acredito que) nunca mais ter problemas com essa parte do salvamento de dados. Amanhâ, partirei para o inicio da parte das pericias. Creta Ni AZOTH Boltre
